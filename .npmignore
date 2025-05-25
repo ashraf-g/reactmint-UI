@@ -1,0 +1,25 @@
+# Source files (keep compiled files only)
+/src
+/__tests__
+
+# Development configs
+*.config.js
+.eslint*
+.prettier*
+.babel*
+jest.config.js
+
+# Git and CI
+.gitignore
+.travis.yml
+.github/
+
+# Documentation (unless needed)
+/docs
+/examples
+CONTRIBUTING.md
+
+# Everything in .gitignore plus:
+test/
+*.test.js
+*.spec.js

@@ -1,0 +1,64 @@
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+/* Padding utilities */
+.p-sm {
+    padding: var(--space-sm);
+}
+
+.p-md {
+    padding: var(--space-md);
+}
+
+.py-sm {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+}
+
+/* Margin utilities */
+.m-sm {
+    margin: var(--space-sm);
+}
+
+.mt-md {
+    margin-top: var(--space-md);
+}
+
+/* Text utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}

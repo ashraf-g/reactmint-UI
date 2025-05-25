@@ -1,0 +1,70 @@
+{
+  "name": "reactmint",
+  "version": "1.0.0",
+  "description": "A modern, lightweight, and customizable React component library with clean CSS for scalable UI development.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "create:component": "node scripts/createComponent.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build && npm run build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashraf-g/reactmint-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashraf-g/reactmint-UI/issues"
+  },
+  "keywords": [
+    "react",
+    "react-components",
+    "ui",
+    "components",
+    "css",
+    "library",
+    "ui-library",
+    "component-library",
+    "css-library",
+    "react-ui",
+    "react-css",
+    "reactmint",
+    "javascript",
+    "design-system"
+  ],
+  "author": "Gulam Ashraf",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-webpack5": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "babel-jest": "^29.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-html-reporter": "^4.1.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.6.14",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9"
+  }
+}

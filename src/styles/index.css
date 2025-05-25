@@ -1,0 +1,16 @@
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
+@import './utilities/utilities.css';
+
+/* Add any global styles here */
+body {
+    background-color: white;
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}

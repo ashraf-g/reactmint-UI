@@ -1,0 +1,19 @@
+@import '../../styles/base/variables.css';
+
+.search {
+  /* Base styles */
+  box-sizing: border-box;
+  display: block;
+  font-family: var(--mint-font-sans);
+}
+
+/* Variant modifiers */
+.search--primary {
+  background-color: var(--mint-primary);
+  color: white;
+}
+
+.search--secondary {
+  background-color: var(--mint-secondary);
+  color: white;
+}

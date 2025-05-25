@@ -1,0 +1,19 @@
+@import '../../styles/base/variables.css';
+
+.button {
+  /* Base styles */
+  box-sizing: border-box;
+  display: block;
+  font-family: var(--mint-font-family);
+}
+
+/* Variant modifiers */
+.button--primary {
+  background-color: var(--mint-primary);
+  color: white;
+}
+
+.button--secondary {
+  background-color: var(--mint-secondary);
+  color: white;
+}
