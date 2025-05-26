@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component matches button with custom class snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button  custom"
+    data-testid="button"
+    role="button"
+  >
+    Custom
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button Component matches default button snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button"
+    data-testid="button"
+    role="button"
+  />
+</DocumentFragment>
+`;
+
+exports[`Button Component matches primary variant snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--primary"
+    data-testid="button"
+    role="button"
+  >
+    Primary
+  </button>
+</DocumentFragment>
+`;
