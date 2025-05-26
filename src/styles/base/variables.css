@@ -8,6 +8,10 @@
     --danger-color: #ef4444;
     --dark-color: #1e293b;
     --light-color: #f8fafc;
+      /* Add these to your existing variables */
+    --mint-primary: var(--primary-color);
+    --mint-secondary: var(--secondary-color);
+    --mint-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     /* Text colors */
     --text-primary: #1e293b;

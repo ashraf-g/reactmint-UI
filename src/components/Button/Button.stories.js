@@ -30,6 +30,7 @@ export default {
   },
   parameters: {
     layout: "padded",
+    viewport: { defaultViewport: "mobile" },
     backgrounds: {
       default: "light",
       values: [

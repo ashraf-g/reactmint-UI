@@ -1,19 +1,27 @@
 @import '../../styles/base/variables.css';
 
 .button {
-  /* Base styles */
+   /* Base styles */
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
   font-family: var(--mint-font-family);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--transition-fast);
+  border: none;
+  outline: none;
 }
 
 /* Variant modifiers */
 .button--primary {
-  background-color: var(--mint-primary);
+  background-color: var(--primary-color);
   color: white;
 }
 
 .button--secondary {
-  background-color: var(--mint-secondary);
+  background-color: var(--secondary-color);
   color: white;
+  box-shadow: none !important;
 }

@@ -12,14 +12,14 @@ const Button = ({
     : "";
 
   return (
-    <div
+    <button
       className={`button ${variantClass} ${className}`.trim()}
       data-testid="button"
       role="button"
       {...props}
     >
       {children}
-    </div>
+    </button>
   );
 };
 
