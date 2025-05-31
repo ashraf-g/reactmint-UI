@@ -36,7 +36,6 @@
     "javascript",
     "design-system"
   ],
-  "author": "Gulam Ashraf",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.27.2",
