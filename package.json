@@ -37,7 +37,8 @@
     "design-system"
   ],
   "license": "MIT",
-  "devDependencies": {
+ 
+   "devDependencies": {
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@storybook/addon-docs": "^9.0.4",
