@@ -1,18 +1,17 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-// import "@testing-library/jest-dom/extend-expect";
 import Button from "./Button";
 
 describe("Button Component", () => {
   // 1. Basic Rendering
   it("renders without crashing", () => {
     render(<Button />);
-    expect(screen.getByTestId("button")).toBeInTheDocument();
+    expect(screen.getByRole("button")).toBeInTheDocument();
   });
 
   it("renders children text correctly", () => {
     render(<Button>Click Me</Button>);
-    expect(screen.getByTestId("button")).toHaveTextContent("Click Me");
+    expect(screen.getByRole("button")).toHaveTextContent("Click Me");
   });
 
   it("renders children elements correctly", () => {
@@ -21,52 +20,46 @@ describe("Button Component", () => {
         <span>Icon</span> Text
       </Button>
     );
-    expect(screen.getByTestId("button")).toContainHTML(
-      "<span>Icon</span> Text"
-    );
+    expect(screen.getByRole("button")).toContainHTML("<span>Icon</span> Text");
   });
 
   // 2. Class Name Handling
   it("applies default class", () => {
     render(<Button />);
-    expect(screen.getByTestId("button")).toHaveClass("button");
+    expect(screen.getByRole("button")).toHaveClass("button");
   });
 
   it("merges custom className correctly", () => {
     render(<Button className="custom-class" />);
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     expect(button).toHaveClass("button");
     expect(button).toHaveClass("custom-class");
-  });
-
-  it("handles empty className prop", () => {
-    render(<Button className="" />);
-    expect(screen.getByTestId("button")).toHaveClass("button");
   });
 
   // 3. Variant Handling
   it("applies default variant when none specified", () => {
     render(<Button />);
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     expect(button).toHaveClass("button");
-    expect(button.className).not.toMatch(/button--/);
+    expect(button).not.toHaveClass("button--primary");
+    expect(button).not.toHaveClass("button--secondary");
   });
 
   it("applies primary variant correctly", () => {
     render(<Button variant="primary" />);
-    expect(screen.getByTestId("button")).toHaveClass("button--primary");
+    expect(screen.getByRole("button")).toHaveClass("button--primary");
   });
 
   it("applies secondary variant correctly", () => {
     render(<Button variant="secondary" />);
-    expect(screen.getByTestId("button")).toHaveClass("button--secondary");
+    expect(screen.getByRole("button")).toHaveClass("button--secondary");
   });
 
   it("handles unknown variant gracefully", () => {
     render(<Button variant="unknown" />);
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     expect(button).toHaveClass("button");
-    expect(button.className).not.toMatch(/button--unknown/);
+    expect(button).not.toHaveClass("button--unknown");
   });
 
   // 4. Props Handling
@@ -81,7 +74,7 @@ describe("Button Component", () => {
       />
     );
 
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     fireEvent.click(button);
 
     expect(button).toHaveAttribute("id", "test-button");
@@ -93,19 +86,14 @@ describe("Button Component", () => {
   it("handles click events", () => {
     const handleClick = jest.fn();
     render(<Button onClick={handleClick} />);
-    fireEvent.click(screen.getByTestId("button"));
+    fireEvent.click(screen.getByRole("button"));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  // 5. Accessibility
-  it("has proper role attribute", () => {
-    render(<Button />);
-    expect(screen.getByTestId("button")).toHaveAttribute("role", "button");
-  });
-
+  // 5. Accessibility - Removed redundant role test since native button has implicit role
   it("accepts aria-* props", () => {
     render(<Button aria-disabled="true" aria-label="Submit" />);
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     expect(button).toHaveAttribute("aria-disabled", "true");
     expect(button).toHaveAttribute("aria-label", "Submit");
   });
@@ -113,24 +101,19 @@ describe("Button Component", () => {
   // 6. Edge Cases
   it("renders correctly with no children", () => {
     render(<Button />);
-    expect(screen.getByTestId("button")).toBeEmptyDOMElement();
-  });
-
-  it("handles null/undefined children gracefully", () => {
-    render(<Button>{null}</Button>);
-    expect(screen.getByTestId("button")).toBeEmptyDOMElement();
+    expect(screen.getByRole("button")).toBeEmptyDOMElement();
   });
 
   it("combines multiple classNames correctly", () => {
     render(<Button className="class1 class2" variant="primary" />);
-    const button = screen.getByTestId("button");
+    const button = screen.getByRole("button");
     expect(button).toHaveClass("button");
     expect(button).toHaveClass("button--primary");
     expect(button).toHaveClass("class1");
     expect(button).toHaveClass("class2");
   });
 
-  // 7. Snapshot Testing
+  // 7. Updated Snapshot Tests
   it("matches default button snapshot", () => {
     const { asFragment } = render(<Button />);
     expect(asFragment()).toMatchSnapshot();

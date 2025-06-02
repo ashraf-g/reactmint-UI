@@ -5,21 +5,20 @@ const Button = ({
   children,
   className = "",
   variant = "default",
+  disabled = false,
   ...props
 }) => {
-  const variantClass = ["primary", "secondary"].includes(variant)
-    ? `button--${variant}`
-    : "";
+  const variantClass = `button--${variant}`;
 
   return (
-    <div
+    <button
       className={`button ${variantClass} ${className}`.trim()}
       data-testid="button"
-      role="button"
+      disabled={disabled}
       {...props}
     >
       {children}
-    </div>
+    </button>
   );
 };
 

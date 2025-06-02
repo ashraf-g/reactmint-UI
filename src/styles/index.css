@@ -3,14 +3,47 @@
 @import './base/typography.css';
 @import './utilities/utilities.css';
 
-/* Add any global styles here */
-body {
-    background-color: white;
-    color: var(--text-primary);
+/* Modern global styles with design token integration */
+:where(body) {
+  background-color: var(--bg-primary, white);
+  color: var(--text-primary);
+  accent-color: var(--color-primary); /* Form control accents */
+  color-scheme: light dark; /* Prepare for dark mode */
 }
 
+/* Container system with logical properties */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+  --gutter: var(--space-md);
+  container-type: inline-size;
+  width: min(100% - 2 * var(--gutter), 1200px);
+  margin-inline: auto;
+}
+
+/* Base interactive element styles */
+:where(a, button, input, select, textarea) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  
+  &:focus-visible {
+    outline: var(--outline-size) var(--outline-style) var(--color-primary);
+    outline-offset: var(--outline-size);
+  }
+}
+
+/* Dark mode support (opt-in) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: var(--color-gray-900);
+    --text-primary: var(--color-gray-50);
+  }
+}
+
+/* Print styles */
+@media print {
+  :where(body) {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: white !important;
+    color: black !important;
+  }
 }
