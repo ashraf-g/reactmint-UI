@@ -1,46 +1,40 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Modern CSS Reset with performance focus */
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+:where(html) {
+  block-size: 100%;
+  scroll-behavior: smooth;
 }
 
-html {
-    scroll-behavior: smooth;
+:where(body) {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
 }
 
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+:where(img, picture, svg, video) {
+  display: block;
+  max-inline-size: 100%;
+  height: auto;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
 }
 
-input,
-button,
-textarea,
-select {
-    font: inherit;
+:where(h1, h2, h3, h4, h5, h6, p) {
+  overflow-wrap: break-word;
+  margin: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
+/* Remove animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :where(html) {
+    scroll-behavior: auto;
+  }
 }
