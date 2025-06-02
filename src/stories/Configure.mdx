@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from "@storybook/addon-docs/blocks";
 
 import Github from "./assets/github.svg";
 import Discord from "./assets/discord.svg";
@@ -15,30 +15,34 @@ import Accessibility from "./assets/accessibility.png";
 import Theming from "./assets/theming.png";
 import AddonLibrary from "./assets/addon-library.png";
 
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
+export const RightArrow = () => (
+  <svg
+    viewBox="0 0 14 14"
+    width="8px"
+    height="14px"
+    style={{
+      marginLeft: "4px",
+      display: "inline-block",
+      shapeRendering: "inherit",
+      verticalAlign: "middle",
+      fill: "currentColor",
+      "path fill": "currentColor",
     }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+  >
+    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+  </svg>
+);
 
-<Meta title="Configure your project" />
+<Meta title="Getting Started" />
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Configure your project
+    # Getting Started
 
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
+    A modern, lightweight, and customizable React component library with clean CSS for scalable UI development.
+
   </div>
+  {/*
   <div className="sb-section">
     <div className="sb-section-item">
       <img
@@ -78,12 +82,16 @@ export const RightArrow = () => <svg
       </div>
     </div>
   </div>
+  */}
 </div>
+
+{/*
 <div className="sb-container">
   <div className='sb-section-title'>
     # Do more with Storybook
 
     Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
+
   </div>
 
   <div className="sb-section">
@@ -148,6 +156,9 @@ export const RightArrow = () => <svg
     </div>
   </div>
 </div>
+*/}
+
+{/*
 <div className='sb-addon'>
   <div className='sb-addon-text'>
     <h4>Addons</h4>
@@ -161,6 +172,8 @@ export const RightArrow = () => <svg
     <img src={AddonLibrary} alt="Integrate your tools with Storybook to connect workflows." />
   </div>
 </div>
+*/}
+
 
 <div className="sb-section sb-socials">
     <div className="sb-section-item">
@@ -168,10 +181,11 @@ export const RightArrow = () => <svg
       Join our contributors building the future of UI development.
 
       <a
-        href="https://github.com/storybookjs/storybook"
+        href="https://github.com/ashraf-g/reactmint-UI"
         target="_blank"
       >Star on GitHub<RightArrow /></a>
     </div>
+    {/*
     <div className="sb-section-item">
       <img src={Discord} alt="Discord logo" className="sb-explore-image"/>
       <div>
@@ -202,7 +216,8 @@ export const RightArrow = () => <svg
           href="https://storybook.js.org/tutorials/"
           target="_blank"
         >Discover tutorials<RightArrow /></a>
-    </div>
+    </div>*/}
+
 </div>
 
 <style>

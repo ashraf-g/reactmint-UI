@@ -18,8 +18,8 @@ A modern, lightweight, and customizable React component library with clean CSS s
 
 ## 📁 Folder Structure
 
-```bash
-.
+```
+ReactMint-UI
 ├── src/
 │   ├── components/           # All reusable components
 │   ├── styles/               # Base + utility CSS
@@ -78,3 +78,4 @@ We welcome all contributions! Open an issue or submit a PR.
 📝 License
 MIT © Gulam Ashraf
 
+```

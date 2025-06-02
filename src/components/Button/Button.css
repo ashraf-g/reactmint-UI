@@ -1,4 +1,4 @@
-@import '../../styles/base/variables.css';
+@import '../../styles/index.css';
 
 .button {
   box-sizing: border-box;
@@ -20,10 +20,89 @@
   border-color: var(--color-primary);
 }
 
+.button--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
 .button--secondary {
   background-color: var(--color-secondary);
   color: white;
   border-color: var(--color-secondary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.button--tertiary {
+  background-color: var(--color-tertiary);
+  color: white;
+  border-color: var(--color-tertiary);
+}
+
+.button--tertiary:hover {
+  background-color: var(--color-tertiary-hover);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-primary);
+}
+
+.button--outline:hover {
+  background-color: var(--surface-primary);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-secondary);
+}
+
+.button--ghost:hover {
+  background-color: var(--surface-secondary);
+}
+
+.button--success {
+  background-color: var(--color-success);
+  color: white;
+  border-color: var(--color-success);
+}
+
+.button--success:hover {
+  background-color: var(--color-success-hover);
+}
+
+.button--warning {
+  background-color: var(--color-warning);
+  color: white;
+  border-color: var(--color-warning);
+}
+
+.button--warning:hover {
+  background-color: var(--color-warning-hover);
+}
+
+.button--danger {
+  background-color: var(--color-error);
+  color: white;
+  border-color: var(--color-error);
+}
+
+.button--danger:hover {
+  background-color: var(--color-error-hover);
+}
+
+.button--link {
+  background: transparent;
+  color: var(--text-link);
+  text-decoration: underline;
+  border: none;
+}
+
+.button--link:hover {
+  color: var(--text-link-hover);
 }
 
 /* Default style */

@@ -14,9 +14,30 @@ export default {
           default: "Default",
           primary: "Primary",
           secondary: "Secondary",
+          disabled: "Disabled",
+          tertiary: "Tertiary",
+          outline: "Outline",
+          ghost: "Ghost",
+          success: "Success",
+          warning: "Warning",
+          danger: "Danger",
+          link: "Link",
         },
       },
-      options: ["default", "primary", "secondary"],
+      options: [
+        "default",
+        "primary",
+        "secondary",
+        "disabled",
+        "tertiary",
+        "outline",
+        "ghost",
+        "success",
+        "warning",
+        "danger",
+        "link",
+      ],
+      defaultValue: "default",
     },
     children: {
       control: "text",
@@ -61,4 +82,46 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
   children: "Disabled Button",
+};
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  variant: "tertiary",
+  children: "Tertiary Action",
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+  variant: "outline",
+  children: "Outline Action",
+};
+
+export const Ghost = Template.bind({});
+Ghost.args = {
+  variant: "ghost",
+  children: "Ghost Action",
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  variant: "success",
+  children: "Success Action",
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  variant: "warning",
+  children: "Warning Action",
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  variant: "danger",
+  children: "Danger Action",
+};
+
+export const Link = Template.bind({});
+Link.args = {
+  variant: "link",
+  children: "Link Action",
 };
